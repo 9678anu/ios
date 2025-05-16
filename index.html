@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium iOS Support | Shop New AVS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #007aff;
+            --primary-dark: #0051a8;
+            --secondary: #ff9500;
+            --dark: #1a2022;
+            --light: #f5f7fa;
+            --gray: #677084;
+            --success: #34c759;
+            --danger: #ff3b30;
+            --background: #f9fbfc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--background);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #007aff 0%, #4da8ff 100%);
+            color: white;
+            padding: 90px 0 130px;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+        }
+
+        .header-content {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 65px;
+            height: 65px;
+            background-color: white;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+            100% { transform: scale(1); }
+        }
+
+        /* Main content */
+        .main-content {
+            margin-top: -90px;
+            margin-bottom: 70px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            color: var(--dark);
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 4px 18px rgba(0, 122, 255, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 22px rgba(0, 122, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #e68a00;
+            transform: translateY(-3px);
+        }
+
+        .call-btn-bottom {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+        }
+
+        .call-btn-bottom i {
+            animation: ring 1.5s infinite ease-in-out;
+        }
+
+        .btn-primary.inline-btn {
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        p::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        @keyframes ring {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(15deg); }
+            20% { transform: rotate(-15deg); }
+            30% { transform: rotate(10deg); }
+            40% { transform: rotate(-10deg); }
+            50% { transform: rotate(5deg); }
+            60% { transform: rotate(-5deg); }
+            70% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: var(--light);
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary), #4da8ff);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+
+        .feature-icon i {
+            color: white;
+            font-size: 24px;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #f0f4ff, #e6f0ff);
+            padding: 70px 0;
+            margin: 70px 0;
+            border-radius: 24px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            margin: 0 15px;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(0, 122, 255, 0.2);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 20px;
+        }
+
+        .faq-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            font-size: 1rem;
+            color: var(--gray);
+            padding-right: 15px;
+            margin-top: 10px;
+        }
+
+        /* Contact */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .contact-method {
+            background: var(--light);
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+
+        /* Disclaimer */
+        .disclaimer-section {
+            background: white;
+            padding: 50px 0;
+            margin: 70px 0 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .disclaimer-section p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .disclaimer-section a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .disclaimer-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .card {
+                padding: 30px;
+            }
+
+            .btn-primary.call-btn-bottom {
+                width: 100%;
+                text-align: center;
+                position: static;
+                margin-top: 20px;
+            }
+
+            .header-content {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            header {
+                padding: 70px 0 110px;
+            }
+
+            .logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo i {
+                font-size: 26px;
+            }
+
+            .btn-primary.inline-btn {
+                float: none;
+                display: block;
+                margin: 0 auto 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="https://download.logo.wine/logo/IOS/IOS-Logo.wine.png" alt="iOS Logo" style="width: 70px; height: 40px;">
+                </div>
+            </div>
+            <h1>Premium iOS Support</h1>
+            <p class="tagline" style="color: #f0f4ff;">Your 24/7 Partner for iPhone, iPad, and Apple Ecosystem</p>
+            <br><a href="tel:+18445133344" class="btn btn-primary">
+                <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i> Call ios Support 24/7 hr's Now
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Introduction Card -->
+            <div class="card">
+                <div class="card-content">
+                    <h2>Comprehensive iOS Support</h2>
+                    <h3>Why Trust Us?</h3>
+                    <p>With 15+ years of Apple expertise, we stay ahead of every iOS update to provide cutting-edge solutions.</p>
+                    <p><a href="tel:+18445133344" class="btn btn-primary inline-btn"><i class="fas fa-phone" style="margin-right: 8px;"></i> Call ios Support 24/7 hr's</a> 
+                        <br><br><br>At Shop New AVS, we deliver top-tier support for all your Apple devices. Our certified iOS experts are available 24/7 to tackle any issue, from setup to advanced troubleshooting.</p>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield"></i>
+                            </div>
+                            <h3 class="feature-title">Security First</h3>
+                            <p class="feature-desc">Your data and privacy are protected with Apple’s strict guidelines.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3 class="feature-title">Always Available</h3>
+                            <p class="feature-desc">Round-the-clock support for your iOS needs.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3 class="feature-title">Expert Team</h3>
+                            <p class="feature-desc">Certified technicians with ongoing Apple training.</p>
+                        </div>
+                    </div>
+                </div><br>
+                <a href="tel:+18445133344" class="btn btn-primary call-btn-bottom">
+                    <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i>Call customer ios support
+                </a>
+            </div>
+
+            <!-- Services Card -->
+            <div class="card">
+                <div class="card-content">
+                    <h2>Our Support Services</h2>
+                    <h3>Setup & Configuration</h3>
+                    <p><a href="tel:+18445133344" class="btn btn-primary inline-btn"><i class="fas fa-phone" style="margin-right: 8px;"></i> Call ios Support 24/7 hr's</a> 
+                        <br><br><br>From new users to Apple enthusiasts, we offer tailored solutions for every iOS need.</p>
+
+                    <p>Seamless device setup with expert guidance:</p>
+                    <ul style="margin-bottom: 18px; padding-left: 20px; color: var(--gray);">
+                        <li style="margin-bottom: 10px;">Personalized device setup</li>
+                        <li style="margin-bottom: 10px;">Data migration (including Android to iOS)</li>
+                        <li style="margin-bottom: 10px;">iCloud optimization</li>
+                        <li style="margin-bottom: 10px;">Email and calendar sync</li>
+                        <li style="margin-bottom: 10px;">Wi-Fi, Bluetooth, and VPN setup</li>
+                    </ul>
+                    <br><a href="tel:+18445133344" class="btn btn-primary">
+                        <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i> Call ios Support 24/7 hr's Now
+                    </a>
+                    <h3>Software & Performance</h3>
+                    <p>Keep your device at peak performance:</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3 class="feature-title">iOS Updates</h3>
+                            <p class="feature-desc">Support for all iOS versions, including betas</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">App Fixes</h3>
+                            <p class="feature-desc">Resolve crashes and compatibility issues</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Battery Life</h3>
+                            <p class="feature-desc">Optimize settings for longer battery</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Storage</h3>
+                            <p class="feature-desc">Manage and free up space efficiently</p>
+                        </div>
+                    </div>
+                    <h3>Security & Privacy</h3>
+                    <p>Safeguard your device and data:</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3 class="feature-title">Biometrics</h3>
+                            <p class="feature-desc">Set up Face ID or Touch ID</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">2FA</h3>
+                            <p class="feature-desc">Secure your Apple ID with 2FA</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Privacy</h3>
+                            <p class="feature-desc">Manage app permissions</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Audits</h3>
+                            <p class="feature-desc">Review security settings</p>
+                        </div>
+                    </div>
+                </div><br><br>
+                <a href="tel:+18445133344" class="btn btn-primary call-btn-bottom">
+                    <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i>Call customer ios support
+                </a>
+            </div>
+
+            <!-- Security Card -->
+            <div class="card">
+                <div class="card-content">
+                    <h2>Advanced Security Protection</h2>
+                    <h3>Threat Detection</h3>
+                    <p><a href="tel:+18445133344" class="btn btn-primary inline-btn"><i class="fas fa-phone" style="margin-right: 8px;"></i> Call ios Support 24/7 hr's</a>
+                        <br><br><br> Your iPhone holds sensitive data. Our experts protect it from modern threats.</p>
+
+                    <p>Stay safe from risks:</p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3 class="feature-title">Phishing</h3>
+                            <p class="feature-desc">Avoid scams and fake messages</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Malware</h3>
+                            <p class="feature-desc">Detect suspicious apps</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Network</h3>
+                            <p class="feature-desc">Secure Wi-Fi connections</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Jailbreak</h3>
+                            <p class="feature-desc">Understand jailbreak risks</p>
+                        </div>
+                    </div>
+                    <h3>Data Protection</h3>
+                    <p>Keep your information secure:</p>
+                    <ul style="margin-bottom: 18px; padding-left: 20px; color: var(--gray);">
+                        <li style="margin-bottom: 10px;">iCloud and local backups</li>
+                        <li style="margin-bottom: 10px;">Encrypted backup setup</li>
+                        <li style="margin-bottom: 10px;">Data recovery solutions</li>
+                        <li style="margin-bottom: 10px;">Secure data deletion</li>
+                        <li style="margin-bottom: 10px;">Device erasure for trade-ins</li>
+                    </ul>
+                    <div class="alert" style="background: rgba(255, 59, 48, 0.05); border-left: 4px solid var(--danger); padding: 14px; border-radius: 10px; margin: 18px 0;">
+                        <h3 style="color: var(--danger); margin: 0 0 10px 0; font-size: 1.15rem;">
+                            <i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i> Security Alert
+                        </h3>
+                        <p style="color: var(--gray); margin: 0;">Recent iOS updates fix critical issues. Call us if you’re not on iOS 16.5 or later.</p>
+                    </div>
+                </div><br><br>
+                <a href="tel:+18445133344" class="btn btn-primary call-btn-bottom">
+                    <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i> Call ios support
+                </a>
+            </div>
+
+            <!-- FAQ Card -->
+            <div class="card">
+                <div class="card-content">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What iOS versions do you support?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            We support iOS 15 and later. We can help update older devices to supported versions.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How fast is your support?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Phone support responds in under 5 minutes. Premium users get priority access.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you fix hardware?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            We focus on software but can diagnose hardware and guide you to Apple repair centers.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can you set up family sharing?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, we help with Family Sharing, Screen Time, and child safety controls.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What info do you need?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Just your iOS version and device model. We never ask for passwords.
+                        </div>
+                    </div>
+                </div><br><br>
+                <a href="tel:+18445133344" class="btn btn-primary call-btn-bottom">
+                    <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i>call ios support
+                </a>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="card" id="contact">
+                <div class="card-content">
+                    <h2>Contact iOS Support</h2>
+                    <p>Our team is ready 24/7 to solve your iOS issues. Call us for instant help.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Phone Support</h3>
+                            <p>Connect with our iOS experts instantly</p>
+                            <p style="font-weight: 600; color: var(--dark); margin: 12px 0;">+1-844-513-3344</p>
+                            <p>24/7 support with priority for premium members</p>
+                        </div>
+                    </div>
+                    <div style="background: rgba(0, 122, 255, 0.05); border-left: 4px solid var(--primary); padding: 14px; border-radius: 10px; margin: 25px 0 0;">
+                        <h3 style="color: var(--primary); margin: 0 0 10px 0; font-size: 1.15rem;">
+                            <i class="fas fa-info-circle" style="margin-right: 8px;"></i> Support Hours
+                        </h3>
+                        <p style="color: var(--gray); margin: 0;">24/7 basic support. Premium subscribers get faster responses and senior technician access. In-depth consultations: Mon-Fri, 8AM-8PM EST.</p>
+                    </div>
+                </div><br><br>
+                <a href="tel:+18445133344" class="btn btn-primary call-btn-bottom">
+                    <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i> +1-844-513-3344
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; color: var(--dark);">What Our Customers Say</h2>
+            <div style="max-width: 750px; margin: 0 auto;">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        My iCloud was a mess, but Shop New AVS fixed it in minutes and showed me how to keep it organized. Amazing service!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SD</div>
+                        <div class="author-info">
+                            <h4>Sarah D.</h4>
+                            <p>iPhone 14 Pro User</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="container" style="margin-bottom: 70px;">
+        <div class="card">
+            <div class="card-content" style="text-align: center;">
+                <h2>Ready for Premium iOS Support?</h2>
+                <p style="max-width: 650px; margin: 0 auto 25px;">Join thousands of happy Apple users who rely on Shop New AVS for fast, expert iOS support. Call us now or explore our premium plans.</p>
+                <a href="tel:+18445133344" class="btn btn-primary" style="margin-right: 12px;">
+                    <i class="fas fa-phone" style="margin-right: 8px; animation: ring 1.5s infinite ease-in-out;"></i> Call Now
+                </a>
+                <a href="#plans" class="btn btn-secondary">
+                    <i class="fas fa-crown" style="margin-right: 8px;"></i> View Plans
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Section -->
+    <div class="disclaimer-section">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> Shop New AVS is an independent service provider and is not affiliated with Apple Inc. Apple, iPhone, iPad, iOS, and other Apple products and services mentioned are trademarks of Apple Inc. Our services include technical support and consultation for Apple products using publicly available information and tools.</p>
+            <p style="margin-top: 12px;">Our support advisors are certified in Apple product support but are not Apple employees. For service directly from Apple, please visit <a href="https://support.apple.com">support.apple.com</a>. Some services may also be available through Apple's official support channels.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Shop New AVS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
